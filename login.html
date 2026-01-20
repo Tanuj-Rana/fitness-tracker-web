@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Blackberry Fitness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫐</text></svg>">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding-bottom: 0;
+        }
+
+        .auth-card {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card auth-card">
+        <a href="index.html" class="logo">Blackberry<span style="color:var(--primary)">Fitness</span></a>
+        <p style="color: var(--text-light); margin-bottom: 30px; font-size: 0.9rem;">WELCOME BACK</p>
+
+        <form id="loginForm">
+
+            <div style="text-align: left; margin-bottom: 5px; font-size: 0.75rem; color: var(--text-light);">
+                EMAIL
+            </div>
+            <input type="email" required placeholder="user@example.com">
+
+            <div style="text-align: left; margin-bottom: 5px; font-size: 0.75rem; color: var(--text-light);">
+                PASSWORD
+            </div>
+            <input type="password" required placeholder="••••••••">
+
+            <button type="submit" class="btn-primary" style="margin-top: 10px;">
+                Access Dashboard
+            </button>
+        </form>
+
+        <div style="margin-top: 25px; font-size: 0.85rem; color: var(--text-light);">
+            New user?
+            <a href="signup.html" style="color: var(--primary); text-decoration: none; font-weight: bold;">
+                Create Account
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

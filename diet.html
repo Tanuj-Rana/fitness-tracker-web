@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition |  Blackberry Fitness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫐</text></svg>">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Blackberry<span style="color:var(--primary)">Fitness</span></a>
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="workout.html">Workouts</a>
+            <a href="diet.html" class="active">Nutrition</a>
+            <a href="bmi.html">Body Stats</a>
+            <a href="login.html" class="mobile-only-btn">Sign Out</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Nutrition Control</h2>
+
+        <div class="dashboard-grid">
+
+            <div style="display:flex; flex-direction: column; gap: 20px;">
+                <div class="card">
+                    <h3>Hydration Status</h3>
+                    <div style="text-align: center; margin: 20px 0;">
+                        <h1 id="waterText" style="color:var(--info); font-size: 2rem;">0 / 10</h1>
+                        <p style="color:var(--text-light); font-size: 0.8rem;">GLASSES TODAY</p>
+                    </div>
+
+                    <div class="water-bar-bg">
+                        <div class="water-bar-fill" id="waterBarFill" style="width:0%"></div>
+                    </div>
+
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:20px;">
+                        <button class="btn-primary" onclick="removeWater()"
+                            style="background:#333; color:white;">-</button>
+                        <button class="btn-primary" onclick="addWater()" style="background:var(--info); color:white;">+
+                            DRINK</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Macro Targets</h3>
+                    <p style="color:var(--text-light); font-size:0.9rem; margin-bottom:15px;">Daily Ratio Recommended
+                    </p>
+
+                    <div style="margin-bottom:10px;">
+                        <div style="display:flex; justify-content:space-between; font-size:0.8rem; margin-bottom:5px;">
+                            <span style="color:#FFA726">Carbs</span> <span>50%</span>
+                        </div>
+                        <div style="height:6px; background:#333; border-radius:3px;">
+                            <div style="width:50%; height:100%; background:#FFA726; border-radius:3px;"></div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom:10px;">
+                        <div style="display:flex; justify-content:space-between; font-size:0.8rem; margin-bottom:5px;">
+                            <span style="color:#66BB6A">Protein</span> <span>30%</span>
+                        </div>
+                        <div style="height:6px; background:#333; border-radius:3px;">
+                            <div style="width:30%; height:100%; background:#66BB6A; border-radius:3px;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div style="display:flex; justify-content:space-between; font-size:0.8rem; margin-bottom:5px;">
+                            <span style="color:#EF5350">Fats</span> <span>20%</span>
+                        </div>
+                        <div style="height:6px; background:#333; border-radius:3px;">
+                            <div style="width:20%; height:100%; background:#EF5350; border-radius:3px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Daily Food Log</h3>
+
+                <div style="display:flex; flex-wrap:wrap; gap: 10px; margin-bottom: 20px;">
+                    <input type="text" id="foodName" placeholder="Food Item"
+                        style="flex: 2; min-width: 120px; margin-bottom:0;">
+                    <input type="number" id="foodCals" placeholder="Kcal"
+                        style="flex: 1; min-width: 80px; margin-bottom:0;">
+                    <button id="addFoodBtn" class="btn-primary" style="width:auto; padding: 0 15px;">+</button>
+                </div>
+
+                <div style="max-height: 400px; overflow-y: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th style="text-align:right">Cals</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="foodListBody">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="total-calories">
+                    <span>TOTAL INTAKE</span>
+                    <span><span id="totalCalsDisplay">0</span> kcal</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

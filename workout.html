@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout | Blackberry Fitness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫐</text></svg>">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Blackberry<span style="color:var(--primary)">Fitness</span></a>
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="workout.html" class="active">Workouts</a>
+            <a href="diet.html">Nutrition</a>
+            <a href="bmi.html">Body Stats</a>
+            <a href="login.html" class="mobile-only-btn">Sign Out</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Training Center</h2>
+
+        <div class="dashboard-grid">
+
+            <div class="card">
+                <h3>Log Session</h3>
+                <label style="color:var(--text-light); font-size:0.8rem;">ACTIVITY TYPE</label>
+                <select id="wType">
+                    <option value="Running">Running</option>
+                    <option value="Weight Lifting">Weight Lifting</option>
+                    <option value="Cycling">Cycling</option>
+                    <option value="Yoga">Yoga</option>
+                    <option value="Swimming">Swimming</option>
+                    <option value="HIIT">HIIT</option>
+                </select>
+
+                <label style="color:var(--text-light); font-size:0.8rem;">DURATION (MINUTES)</label>
+                <input type="number" id="wDuration" placeholder="e.g. 45">
+
+                <button id="logWorkoutBtn" class="btn-primary">Save Workout</button>
+
+                <div style="margin-top: 30px;">
+                    <h3>Recent History</h3>
+                    <div id="workoutLogContainer">
+                        <p style="color:var(--text-light); font-size:0.8rem; padding:10px;">No logs yet.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Suggested Weekly Split</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Focus</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MON</td>
+                                <td><span style="color:white; white-space: nowrap;">Chest & Triceps</span></td>
+                                <td><span style="color:var(--accent); font-size:0.7rem;">DONE</span></td>
+                            </tr>
+                            <tr>
+                                <td>TUE</td>
+                                <td><span style="color:white; white-space: nowrap;">Back & Biceps</span></td>
+                                <td><span style="color:var(--text-light); font-size:0.7rem;">REST</span></td>
+                            </tr>
+                            <tr>
+                                <td>WED</td>
+                                <td><span style="color:white; white-space: nowrap;">Legs & Core</span></td>
+                                <td><span style="color:var(--text-light); font-size:0.7rem;">PENDING</span></td>
+                            </tr>
+                            <tr>
+                                <td>THU</td>
+                                <td><span style="color:white; white-space: nowrap;">Active Recovery</span></td>
+                                <td><span style="color:var(--text-light); font-size:0.7rem;">PENDING</span></td>
+                            </tr>
+                            <tr>
+                                <td>FRI</td>
+                                <td><span style="color:white; white-space: nowrap;">Shoulders & Abs</span></td>
+                                <td><span style="color:var(--text-light); font-size:0.7rem;">PENDING</span></td>
+                            </tr>
+                            <tr>
+                                <td>SAT</td>
+                                <td><span style="color:white; white-space: nowrap;">Full Body HIIT</span></td>
+                                <td><span style="color:var(--text-light); font-size:0.7rem;">PENDING</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card" style="height: fit-content;">
+                <h3>Personal Records</h3>
+                <div class="record-row"
+                    style="display:flex; justify-content:space-between; border-bottom:1px solid #333; padding:15px 0;">
+                    <span style="color:var(--text-light);">5K Run</span>
+                    <span style="font-weight:bold; color:var(--primary);">24:30 min</span>
+                </div>
+                <div class="record-row"
+                    style="display:flex; justify-content:space-between; border-bottom:1px solid #333; padding:15px 0;">
+                    <span style="color:var(--text-light);">Bench Press</span>
+                    <span style="font-weight:bold; color:var(--primary);">85 kg</span>
+                </div>
+                <div class="record-row" style="display:flex; justify-content:space-between; padding:15px 0;">
+                    <span style="color:var(--text-light);">Plank</span>
+                    <span style="font-weight:bold; color:var(--primary);">2:15 min</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

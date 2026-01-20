@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Stats | Blackberry Fitness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫐</text></svg>">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Blackberry<span style="color:var(--primary)">Fitness</span></a>
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="workout.html">Workouts</a>
+            <a href="diet.html">Nutrition</a>
+            <a href="bmi.html" class="active">Body Stats</a>
+            <a href="login.html" class="mobile-only-btn">Sign Out</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Body Composition</h2>
+
+        <div class="dashboard-grid">
+
+            <div class="card">
+                <h3>Calculate BMI</h3>
+                <p style="color:var(--text-light); font-size:0.9rem; margin-bottom:20px;">
+                    Body Mass Index (BMI) is a simple index of weight-for-height used to classify underweight,
+                    overweight and obesity.
+                </p>
+
+                <input type="number" id="weight" placeholder="Weight (kg)">
+                <input type="number" id="height" placeholder="Height (cm)">
+                <button id="calculateBmiBtn" class="btn-primary">Analyze</button>
+
+                <div id="bmiResultArea"
+                    style="display:none; text-align:center; margin-top:30px; background:#252525; padding:20px; border-radius:8px;">
+                    <span style="color:var(--text-light); text-transform:uppercase; font-size:0.8rem;">Your
+                        Result</span>
+                    <h1 id="bmiValue" style="font-size:3.5rem; color:white; margin:10px 0;">00.0</h1>
+                    <h4 id="bmiCategory" style="text-transform:uppercase; letter-spacing:2px;">NORMAL</h4>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Reference Scale</h3>
+
+                <div style="margin-top:40px;">
+                    <div class="marker-container">
+                        <div id="bmiMarker" class="bmi-marker"></div>
+                    </div>
+                    <div class="bmi-visual">
+                        <div class="bmi-zone zone-u"></div>
+                        <div class="bmi-zone zone-n"></div>
+                        <div class="bmi-zone zone-o"></div>
+                        <div class="bmi-zone zone-ob"></div>
+                    </div>
+                    <div
+                        style="display:flex; justify-content:space-between; font-size:0.7rem; color:var(--text-light);">
+                        <span>15</span>
+                        <span>18.5</span>
+                        <span>25</span>
+                        <span>30</span>
+                        <span>40</span>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table style="margin-top:30px;">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>BMI Range</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="color:#4FC3F7">Underweight</td>
+                                <td>&lt; 18.5</td>
+                            </tr>
+                            <tr>
+                                <td style="color:#66BB6A">Normal Weight</td>
+                                <td>18.5 – 24.9</td>
+                            </tr>
+                            <tr>
+                                <td style="color:#FFA726">Overweight</td>
+                                <td>25.0 – 29.9</td>
+                            </tr>
+                            <tr>
+                                <td style="color:#EF5350">Obesity</td>
+                                <td>&ge; 30.0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card" style="grid-column: 1 / -1;">
+                <h3>Health Insights</h3>
+                <div
+                    style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px; margin-top:10px;">
+                    <div style="background:#252525; padding:15px; border-radius:4px;">
+                        <strong style="color:var(--primary);">Hydration</strong>
+                        <p style="font-size:0.85rem; color:var(--text-light); margin-top:5px;">Drinking water before
+                            meals can help regulate appetite and support metabolism.</p>
+                    </div>
+                    <div style="background:#252525; padding:15px; border-radius:4px;">
+                        <strong style="color:var(--accent);">Protein</strong>
+                        <p style="font-size:0.85rem; color:var(--text-light); margin-top:5px;">Adequate protein intake
+                            preserves muscle mass during weight management.</p>
+                    </div>
+                    <div style="background:#252525; padding:15px; border-radius:4px;">
+                        <strong style="color:var(--info);">Sleep</strong>
+                        <p style="font-size:0.85rem; color:var(--text-light); margin-top:5px;">7-9 hours of sleep
+                            regulates hunger hormones ghrelin and leptin.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Blackberry Fitness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫐</text></svg>">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Blackberry<span style="color:var(--primary)">Fitness</span></a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="workout.html">Workouts</a>
+            <a href="diet.html">Nutrition</a>
+            <a href="bmi.html">Body Stats</a>
+            <a href="login.html"
+                style="color: var(--text-light); border: 1px solid var(--border); padding: 5px 15px; margin-left: 30px; border-radius:4px;">Sign
+                Out</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+            <h2 class="section-title" style="margin-bottom:0; border:none; padding:0;">Overview</h2>
+            <span style="color:var(--text-light); font-size:0.9rem;">Welcome back, User</span>
+        </div>
+
+        <div class="dashboard-grid stats-grid-mobile"
+            style="margin-bottom:30px; grid-template-columns: repeat(3, 1fr);">
+            <div class="stat-card">
+                <div class="stat-label">Current Streak</div>
+                <div class="stat-value" id="streakDisplay">0</div>
+                <button id="checkInBtn" class="btn-primary" style="padding:10px;">Check In</button>
+            </div>
+
+            <div class="stat-card" style="border-top-color: var(--accent);">
+                <div class="stat-label">Workouts</div>
+                <div class="stat-value">4/5</div>
+                <div style="font-size: 0.8rem; color: var(--text-light);">Weekly Goal</div>
+            </div>
+
+            <div class="stat-card" style="border-top-color: var(--info);">
+                <div class="stat-label">Avg. Sleep</div>
+                <div class="stat-value">7.2<span style="font-size:1rem">h</span></div>
+                <div style="font-size: 0.8rem; color: var(--text-light);">Last 7 Days</div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+
+            <div class="card">
+                <h3>Quick Actions</h3>
+                <div style="display:flex; gap:15px; flex-wrap:wrap;">
+                    <button onclick="window.location.href='workout.html'" class="btn-primary" style="flex:1;">Log
+                        Workout</button>
+                    <button onclick="window.location.href='diet.html'" class="btn-primary"
+                        style="flex:1; background-color: #333; color:white;">Log Meal</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Weekly Activity</h3>
+                <div
+                    style="display:flex; justify-content:space-between; align-items:flex-end; height:150px; padding-top:20px;">
+                    <div style="width:10%; background:var(--primary); height:40%; border-radius:3px;"></div>
+                    <div style="width:10%; background:var(--primary); height:70%; border-radius:3px;"></div>
+                    <div style="width:10%; background:var(--primary); height:30%; border-radius:3px;"></div>
+                    <div style="width:10%; background:var(--primary); height:85%; border-radius:3px;"></div>
+                    <div style="width:10%; background:var(--primary); height:50%; border-radius:3px;"></div>
+                    <div style="width:10%; background:var(--primary); height:90%; border-radius:3px;"></div>
+                    <div style="width:10%; background:#333; height:10%; border-radius:3px;"></div>
+                </div>
+                <div
+                    style="display:flex; justify-content:space-between; margin-top:10px; color:var(--text-light); font-size:0.75rem;">
+                    <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:50px; margin-bottom:20px;">
+        <button onclick="resetApp()"
+            style="background:none; border:none; color:#555; font-size:0.7rem; cursor:pointer; text-decoration:underline;">
+            RESET ALL DATA
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
